@@ -1,3 +1,6 @@
+import Label from "./Label";
+import Input from "./Input";
+
 type Props = {
   label: string;
   name: string;
@@ -9,15 +12,15 @@ type Props = {
 function TextField(props: Props) {
   return (
     <div className="flex flex-col gap-1 relative">
-      <input
+      <Input
         type="text"
         id={props.name}
-        {...props}
-        className="text-sm border-2 border-gray-300 rounded-lg px-4 py-1 focus:outline-blue-400 peer order-2 placeholder:text-gray-300"
+        name={props.name}
+        placeholder={props.placeholder}
+        value={props.value}
+        onChange={props.onChange}
       />
-      <label htmlFor={props.name} className="text-sm font-semibold text-gray-700 px-4 peer-focus:text-blue-400">
-        {props.label}
-      </label>
+      <Label htmlFor={props.name}>{props.label}</Label>
     </div>
   );
 }

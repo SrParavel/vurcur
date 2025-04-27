@@ -9,5 +9,16 @@
     "Oficio SNR",
     "Solicitudes Varias",
     "OBS Vecinos"
+  ],
+  "Estado inicial": ["Documento informativo", "Para análisis y estudio", "En estudio", "Viabilidad"],
+  "Tipo de persona": ["Persona Natural", "Persona Jurídica", "Entidad Pública", "Entidad Privada"],
+  "Estado del documento": ["En Proceso", "Revisado", "Archivado", "Terminado", "Para Respuesta"],
+  "Trabajadores": [
+    "Miguel Paez G",
+    "Victor Martinez L",
+    "Enrique Elvira T",
+    "Lesbia Pérez O",
+    "Lorena Cuao S",
+    "Wendy De La Hoz N"
   ]
 }

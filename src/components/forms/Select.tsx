@@ -1,3 +1,5 @@
+import Label from "./Label";
+
 type Props = {
   label: string;
   name: string;
@@ -11,9 +13,10 @@ function Select(props: Props) {
     <div className="flex flex-col gap-1 relative">
       <select
         id={props.name}
+        name={props.name}
         value={props.value}
         onChange={props.onChange}
-        className="text-sm border-2 border-gray-300 rounded-lg px-4 py-1 focus:outline-blue-400 peer order-2"
+        className="text-sm border border-gray-300 rounded-lg px-4 py-1 focus:outline-none focus:ring-blue-500 focus:ring-2 peer order-2 placeholder:text-gray-300 transition duration-300"
       >
         {props.options.map((option) => (
           <option key={option} value={option}>
@@ -21,9 +24,8 @@ function Select(props: Props) {
           </option>
         ))}
       </select>
-      <label htmlFor={props.name} className="text-sm font-semibold text-gray-700 px-4 peer-focus:text-blue-400">
-        {props.label}
-      </label>
+
+      <Label htmlFor={props.name}>{props.label}</Label>
     </div>
   );
 }
